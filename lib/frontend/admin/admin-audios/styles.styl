@@ -1,0 +1,71 @@
+#listadoAudio
+  .upper
+    text-transform: uppercase
+  .player-button
+    cursor: pointer
+    color: $primary-color
+    margin-bottom: 2px
+    &.disabled
+      cursor: not-allowed
+      opacity: 0.5
+      color: #5a5a5a
+    &.playing
+      cursor: not-allowed
+
+  .media
+    padding: 10px;
+    border: 1px solid #ccc
+    // box-shadow: 0 0 5px #ccc
+    margin: 0;
+    &.featured
+      background-color: #fff7e0
+    &.spam
+      background-color: #fae7e7
+      .media-body
+        opacity: 0.5
+        text-decoration: line-through;
+    &:not(:last-child)
+      border-bottom: none;
+  .media-body p
+    margin: 0;
+  .description
+    font-size: 0.8em
+    color: #999
+    line-height: normal
+  .edit-pencil
+    cursor: pointer
+    color: $primary-color
+
+#editarAudio
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  background-color: #000000a0;
+  z-index: 10000;
+  .panel.panel-primary
+    width: 60%;
+    margin: 0 auto;
+  .reaction
+    opacity: 0.5
+    padding: 0 5px;
+    font-size: 25px;
+    &:hover
+      cursor: pointer
+    &.selected
+      opacity: 1
+
+#queryAudios
+  .reaction
+    opacity: 0.5
+    padding: 0 5px;
+    font-size: 25px;
+    &:hover
+      cursor: pointer
+    &.selected
+      opacity: 1

@@ -148,6 +148,8 @@
     "en"
   ],
   "enforceLocale": true,
+  "adminMail": "",
+  "adminPass": "",
   "allowPublicAccess": true,
   "allowPublicSignUp": true
 }

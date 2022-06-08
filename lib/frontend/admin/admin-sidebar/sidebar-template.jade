@@ -1,6 +1,6 @@
 ul.admin-menu.nav.nav-pills.nav-stacked(class=forum.privileges.canChangeTopics ? '' : 'hide')
   - if (forum.privileges.canCreateTopics)
-    li: a(href=urlBuilder.for('admin.topics', {forum: forum.name}) data-section='topics')=t('admin-sidebar.topics.title')
+    li: a(href=urlBuilder.for('admin.topics', {forum: forum.name}) data-section='topics')='Proyectos'
   - if (forum.privileges.canEdit)
     li: a(href=urlBuilder.for('admin.permissions', {forum: forum.name}) data-section='permissions')=t('admin-sidebar.permissions.title')
     li: a(href=urlBuilder.for('admin.forum.edit', {forum: forum.name}) data-section='edit-forum')=t('admin-sidebar.edit-forum.title')
@@ -12,3 +12,9 @@ ul.admin-menu.nav.nav-pills.nav-stacked(class=forum.privileges.canChangeTopics ?
     li: a(href=urlBuilder.for('admin.tags-moderation', {forum: forum.name}) data-section='tags-moderation')=t('admin-sidebar.tags-moderation.title')
   - if (config.usersWhitelist)
     li: a(href="/admin/users" data-section='users')=t('admin-sidebar.whitelists.title')
+  - if (user.staff)
+    li
+      a(href=urlBuilder.for('admin.audios', {forum: forum.name}) data-section='audios')
+        span.glyphicon.glyphicon-volume-up
+        =' Audios'
+

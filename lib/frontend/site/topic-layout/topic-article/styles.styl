@@ -1,6 +1,6 @@
 .topic-article-wrapper
-  padding-top: 1em
-  width: 100%
+  // padding-top: 1em
+  // width: 100%
   @import './admin-actions/styles'
   @import './header/styles'
   @import './content/styles'
@@ -17,26 +17,45 @@
 
   /* ext */
   position: relative
-  margin-left: auto
-  margin-right: auto
-  padding: 40px 5px
-  max-width: 100%
-  background-color: #f9f9f9
-  @media (min-width: 991px)
-    display: flex
-    flex-direction: row
+  // margin-left: auto
+  // margin-right: auto
+  // padding: 40px 5px
+  // max-width: 100%
+  background-color: #F9F9F9
+  // @media (min-width: 991px)
+  //   display: flex
+  //   flex-direction: row
+  /* ext */
+  .secondary-wrapper
+    flex-direction: column
+    width:100%
+    @media (min-width: 768px)
+      padding: 50px 90px;
+    .btn-special
+      background-color: transparent;
+      border: 2px solid $main-color !important;
+      color: $main-color
+      &:hover
+        background-color: $main-color
+        color: #FFF;
+    .btn-special-two
+      border: 2px solid $main-color !important;
+      background-color: $main-color
+      color: #FFF;
+      &:hover
+        background-color: darken($main-color, 10%)
+        border-color: darken($main-color, 10%)
 
-
-  @media (min-width: 544px)
-    padding-top: 60px
-    padding-left: 30px
-    padding-right: 30px
+  // @media (min-width: 544px)
+  //   padding-top: 60px
+  //   padding-left: 30px
+  //   padding-right: 30px
 
   @media (min-width: 768px)
     top: -60px
 
-  @media (min-width: 991px)
-    max-width: 1000px
+  // @media (min-width: 991px)
+  //   max-width: 1000px
     
   .topic-admin-actions a:hover
     color: $main-color-resalted
@@ -76,8 +95,8 @@
     margin-left: auto
     margin-right: auto
 
-  button.btn.btn-primary
-    width:100%
+  // button.btn.btn-primary
+  //   width:100%
 
   .topics-hierarchy
     h4
@@ -112,10 +131,10 @@
     display none
 
 .topic-article-content
-  max-width 600px
-  margin 0 auto
-  padding-left 15px
-  padding-right 15px
+  // max-width 600px
+  // margin 0 auto
+  // padding-left 15px
+  // padding-right 15px
 
 .embed-container
   position relative
@@ -197,19 +216,14 @@ topicColor2 = #999
         topicBoxSize*-1px topicBoxSize*-1px topicColor2
       }
     }
-
-/* ext */
-.secondary-wrapper
-  flex-direction: column
-  width:100%
   
 iframe
-  @media (min-width: 700px)
+  @media (min-width: 768px)
     width: 600px
     height: 400px
 
-.topic-article-wrapper.large
-  max-width:1000px
+// .topic-article-wrapper.large
+//   max-width:1000px
 
 .llamado-content
   margin-top: 30px
