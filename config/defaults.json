@@ -151,5 +151,10 @@
   "adminMail": "",
   "adminPass": "",
   "allowPublicAccess": true,
-  "allowPublicSignUp": true
+  "allowPublicSignUp": true,
+  "doSpacesEndpoint": "",
+  "doSpacesBucket": "",
+  "doSpacesFolder": "",
+  "doSpacesKey": "",
+  "doSpacesSecret": ""
 }
