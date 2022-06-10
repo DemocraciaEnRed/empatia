@@ -1,40 +1,90 @@
 #topics-wrapper
   .topics-admin
-    .well.well-lg.clearfix
-      .col-md-2.col-xs-12
-        a.btn.btn-success.btn-block.new(href=urlBuilder.for('admin.topics.create', {forum: forum.name}))
-          span.glyphicon.glyphicon-plus
-          = ' ' + t('admin-topics.list.add-topic')
-      .col-md-7.col-xs-12.text-center
-        .input-group.input-group-md
-          span.input-group-addon
-            i.glyphicon.glyphicon-search
-          input.form-control.search(type='text', placeholder='#{t("admin-topics.list.search.placeholder")}', autofocus, maxlength='100')
-      .col-md-3.col-xs-12.text-center
-        .btn-group
-          span.sort-label.pull-left=t('admin-topics.list.sort')
-          button.btn.btn-primary.sort(data-sort='topic-date')
-            span.glyphicon.glyphicon-time
-          button.btn.btn-primary.sort(data-sort='topic-title')
-            span.glyphicon.glyphicon-font
-    .well.well-sm.clearfix.export-update
-    .list.list-group.col-xs-12
-      - each topic in topics
-        a.list-group-item(href=urlBuilder.for('admin.topics.id', {id: topic.id, forum: forum.name}), data-topicid=topic.id)
-          button.btn.btn-default.pull-right.delete-topic
-            span.glyphicon.glyphicon-trash
-          h4.topic-title=topic.mediaTitle
-            small=topic.topicId
-          - if (topic.author)
-            span.glyphicon.glyphicon-user
-            span.text=topic.author
-          - if (topic.closingAt)
-            - var date = new Date(topic.closingAt)
-            - var relative = moment(date).fromNow()
-            - var when = (date < Date.now()) ? 'past' : 'future'
-            span.glyphicon.glyphicon-time
-            span.text=t('admin-topics.list.close.' + when) + ' ' + relative
-          span.glyphicon.glyphicon-tag
-          span.text.topic-id=topic.tag.name
-          span.topic-date.hide=topic.createdAt
+    h2.mt-2='Proyectos'
+    a.btn.btn-success.new(href=urlBuilder.for('admin.topics.create', {forum: forum.name}))
+      span.glyphicon.glyphicon-plus
+      = ' ' + t('admin-topics.list.add-topic')
+    br
+    br
+    //- .well.well-sm.text-center
+    //- .col-md-2.col-xs-12
+      a.btn.btn-success.btn-block.new(href=urlBuilder.for('admin.topics.create', {forum: forum.name}))
+        span.glyphicon.glyphicon-plus
+        = ' ' + t('admin-topics.list.add-topic')
+    //- .col-md-7.col-xs-12.text-center
+    //-   .input-group.input-group-md
+    //-     span.input-group-addon
+    //-       i.glyphicon.glyphicon-search
+    //-     input.form-control.search(type='text', placeholder='#{t("admin-topics.list.search.placeholder")}', autofocus, maxlength='100')
+    //- .col-md-3.col-xs-12.text-center
+    //-   .btn-group
+    //-     span.sort-label.pull-left=t('admin-topics.list.sort')
+    //-     button.btn.btn-primary.sort(data-sort='topic-date')
+    //-       span.glyphicon.glyphicon-time
+    //-     button.btn.btn-primary.sort(data-sort='topic-title')
+    //-       span.glyphicon.glyphicon-font
+    //- .well.well-sm.clearfix.export-update
+    //-   .list.list-group.list-group-flush.col-xs-12
+    
+    //-   - each topic in topics
+    //-     a.list-group-item(href=urlBuilder.for('admin.topics.id', {id: topic.id, forum: forum.name}), data-topicid=topic.id)
+    //-       button.btn.btn-default.pull-right.delete-topic
+    //-         span.glyphicon.glyphicon-trash
+    //-       h4.topic-title=topic.mediaTitle
+    //-         small=topic.topicId
+    //-       - if (topic.author)
+    //-         span.glyphicon.glyphicon-user
+    //-         span.text=topic.author
+    //-       - if (topic.closingAt)
+    //-         - var date = new Date(topic.closingAt)
+    //-         - var relative = moment(date).fromNow()
+    //-         - var when = (date < Date.now()) ? 'past' : 'future'
+    //-         span.glyphicon.glyphicon-time
+    //-         span.text=t('admin-topics.list.close.' + when) + ' ' + relative
+    //-       span.glyphicon.glyphicon-tag
+    //-       span.text.topic-id=topic.tag.name
+    //-       span.topic-date.hide=topic.createdAt
+    - each topic in topics
+      .card.my-1
+        .card-body.p-3
+          a.p-0(href=urlBuilder.for('admin.topics.id', {id: topic.id, forum: forum.name}), data-topicid=topic.id)
+            h3.mt-1.mb-3=topic.mediaTitle
+              - if (topic.topicId)
+                  small=' (' + topic.topicId + ')'
+          .text-muted
+            if (topic.action)
+              i.fas.fa-chart-simple.mx-1
+              span.mx-1.text
+                case topic.action.method
+                  when 'cause'
+                    = 'Causa (' + (topic.action.count) + ')'
+                  when 'slider'
+                    = 'Rango (' + (topic.action.count) + ')'
+                  when 'hierarchy'
+                    = 'Jerarquia (' + (topic.action.count) + ')'
+                  when 'vote'
+                    = 'Voto (' + (topic.action.count) + ')'
+                  when 'poll'
+                    = 'Encuesta (' + (topic.action.count) + ')'
+            i.fas.fa-comment.mx-1
+            span.mx-1=topic.commentersCount + ' Comentarios'
+          .text-muted
+            - if (topic.author)
+              i.mx-1.fas.fa-user
+              span.mx-1.text=topic.author
+            - if (topic.closingAt)
+              - var date = new Date(topic.closingAt)
+              - var relative = moment(date).fromNow()
+              - var when = (date < Date.now()) ? 'past' : 'future'
+              i.mx-1.far.fa-clock
+              span.mx-1.text=t('admin-topics.list.close.' + when) + ' ' + relative
+            //- button.btn.btn-link.p-0.mx-1.delete-topic
+            //-   i.fas.fa-trash.fa-fw
+            //-   span='Eliminar'
+          .text-muted
+            i.fas.fa-tag.mx-1
+            span.mx-1=topic.tag.name
+            i.fas.fa-calendar.mx-1
+            span.mx-1=moment(topic.createdAt).format('DD/MM/YYYY HH:mm')
+
     .topics-pagination
