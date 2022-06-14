@@ -7,7 +7,7 @@ const juice = require('juice');
 
 const baseUrl = utils.buildUrl(config)
 const fontFamily = 'Roboto, sans-serif'
-const colorBotones = '#005e80'
+const colorBotones = '#D90D65'
 
 // template sacado de: https://github.com/leemunroe/responsive-html-email-template
 module.exports = ({
@@ -378,7 +378,7 @@ module.exports = ({
                         <td class="align-center">
                           <!-- When inserting images remember to include the following attributes or
                           risk them breaking in different clients: src, alt, width, height, border -->
-                          <a href="${baseUrl}"><img class="block-center" src="${baseUrl}/ext/lib/boot/logo-mail.png" alt="${config.organizationName}" width="200" height="55" border="0" style="border:0; outline:none; text-decoration:none; display:block;"></a>
+                          <a href="${baseUrl}"><img class="block-center" src="${baseUrl}/ext/lib/boot/logo-empatia.png" alt="${config.organizationName}" width="150" border="0" style="border:0; outline:none; text-decoration:none; display:block;"></a>
                         </td>
                       </tr>
                     </table>
@@ -393,7 +393,8 @@ module.exports = ({
                 <table role="presentation" border="0" cellpadding="0" cellspacing="0">
                   <tr>
                     <td class="content-block powered-by">
-                      Hecho con <3 por <a href="https://democraciaenred.org">Democracia en Red</a>
+                      © 2022 <a href="https://empatia.org">Empatia</a>
+                      <br>La revolución que transforma a la Argentina
                     </td>
                   </tr>
                 </table>

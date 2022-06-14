@@ -152,6 +152,8 @@
   "adminPass": "",
   "allowPublicAccess": true,
   "allowPublicSignUp": true,
+  "signUpLink": "",
+  "preSignUpToken": "",
   "doSpacesEndpoint": "",
   "doSpacesBucket": "",
   "doSpacesFolder": "",

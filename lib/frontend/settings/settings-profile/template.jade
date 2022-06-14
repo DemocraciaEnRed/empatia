@@ -13,6 +13,9 @@
         label= t('settings.last-name')
         input.form-control(type='text', id='lastName', name='lastName', maxlength=100, placeholder=t('settings.last-name'), value='#{user.lastName}', validate='required lastname')
       .form-group
+        label='DNI'
+        input.form-control(type='text', id='dni', name='dni', maxlength=20, placeholder='Tu DNI', value='#{user.dni||""}', disabled=true)
+      .form-group
         label= t('signup.email')
         input.form-control(type='text', disabled='disabled', name='email', maxlength=200, placeholder=t('forgot.mail.example'), value='#{user.email}', validate='required email')
       .form-group
