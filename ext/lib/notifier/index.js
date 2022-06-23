@@ -13,7 +13,9 @@ const interval = setInterval(function () {
       require('./jobs/welcome-email-private'),
       require('./jobs/new-comment'),
       require('./jobs/comment-reply'),
-      require('./jobs/forgot-password')
+      require('./jobs/thanks-audio'),
+      require('./jobs/forgot-password'),
+      require('./jobs/set-password')
     ].forEach((job) => job(notifier))
     log('Ext notifier email jobs loaded')
 

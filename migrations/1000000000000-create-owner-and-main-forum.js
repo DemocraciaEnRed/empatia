@@ -12,7 +12,7 @@ const adminData = {
   username: adminMail,
   firstName: 'Admin',
   lastName: 'Sistema',
-  dni: '000000000',
+  dni: '00000000',
   password: adminPass,
   re_password: adminPass,
   locale: 'es'
