@@ -154,6 +154,11 @@ export class SignIn extends Component {
             </div>
         </div>
         {form}
+        <hr/>
+        <p className='muted text-center'>¿Aún no se registro?</p>
+        <a href={config.typeformLink} className="btn btn-success btn-block text-white">
+          REGISTRARSE
+        </a>
       </div>
     )
   }
