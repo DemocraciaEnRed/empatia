@@ -97,7 +97,8 @@
     "warnHTTP",
     "recaptchaSite",
     "allowPublicAccess",
-    "allowPublicSignUp"
+    "allowPublicSignUp",
+    "typeformLink"
   ],
   "socialshare": {
     "siteName": "DemocracyOS",
@@ -152,7 +153,7 @@
   "adminPass": "",
   "allowPublicAccess": true,
   "allowPublicSignUp": true,
-  "signUpLink": "",
+  "typeformLink": "",
   "typeformWebhookSecret": "",
   "doSpacesEndpoint": "",
   "doSpacesBucket": "",
