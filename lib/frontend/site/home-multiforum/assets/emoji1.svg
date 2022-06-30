@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="79.188" height="79.188" viewBox="0 0 79.188 79.188">
+  <g id="Group_535" data-name="Group 535" transform="translate(-742.67 -476.64)">
+    <g id="Group_534" data-name="Group 534" transform="translate(742.67 476.64)">
+      <g id="Group_528" data-name="Group 528" transform="translate(0 0)">
+        <g id="Group_525" data-name="Group 525">
+          <circle id="Ellipse_18" data-name="Ellipse 18" cx="27.997" cy="27.997" r="27.997" transform="translate(0 39.594) rotate(-45)" fill="#ffd05d"/>
+        </g>
+        <g id="Group_526" data-name="Group 526" transform="translate(16.001 15.698)">
+          <path id="Path_42" data-name="Path 42" d="M829.626,524.432a28,28,0,0,1-38.24,38.943,28,28,0,1,0,38.24-38.943Z" transform="translate(-791.386 -524.432)" fill="#fdc453"/>
+        </g>
+        <g id="Group_527" data-name="Group 527" transform="translate(13.467 13.664)">
+          <path id="Path_43" data-name="Path 43" d="M785.6,547.122a25.993,25.993,0,0,1,46.6-15.845,26,26,0,1,0-43.144,28.8A25.876,25.876,0,0,1,785.6,547.122Z" transform="translate(-783.67 -518.239)" fill="#ffd77f"/>
+        </g>
+      </g>
+      <g id="Group_532" data-name="Group 532" transform="translate(27.216 30.907)">
+        <g id="Group_531" data-name="Group 531">
+          <g id="Group_529" data-name="Group 529">
+            <ellipse id="Ellipse_19" data-name="Ellipse 19" cx="2.063" cy="3.477" rx="2.063" ry="3.477" fill="#303030"/>
+          </g>
+          <g id="Group_530" data-name="Group 530" transform="translate(20.629 0)">
+            <path id="Path_44" data-name="Path 44" d="M892.46,574.211c0,1.92-.924,3.477-2.063,3.477s-2.063-1.557-2.063-3.477.924-3.477,2.063-3.477S892.46,572.291,892.46,574.211Z" transform="translate(-888.334 -570.734)" fill="#303030"/>
+          </g>
+        </g>
+      </g>
+      <g id="Group_533" data-name="Group 533" transform="translate(26.953 23.281)">
+        <rect id="Rectangle_185" data-name="Rectangle 185" width="2.655" height="8.859" transform="translate(0 1.877) rotate(-45)" fill="#303030"/>
+        <rect id="Rectangle_186" data-name="Rectangle 186" width="2.655" height="8.859" transform="translate(23.405 0) rotate(45)" fill="#303030"/>
+      </g>
+    </g>
+    <path id="Path_45" data-name="Path 45" d="M851.475,616.2a.924.924,0,0,0,1.5-1.008,14.034,14.034,0,0,0-25.953-.258.923.923,0,0,0,1.492,1.019C832.614,611.983,841.313,606.33,851.475,616.2Z" transform="translate(-56.596 -87.121)" fill="#5e4939"/>
+  </g>
+</svg>

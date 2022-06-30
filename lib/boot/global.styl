@@ -3,11 +3,14 @@
 
 
 // colores principales de textos y otras cositas
-$main-color = #D90D65
-$main-color-resalted = #e00464
+$main-color = #C22978
+$main-color-resalted = #c0156d
 // colores de links o textos tipo links
-$main-link-color = #1fac92
-$main-link-color-hover = #257b6c
+// $main-link-color = #1fac92
+// $main-link-color-hover = #257b6c
+$main-link-color = #C22978
+$main-link-color-hover = #c0156d
+
 // otros colores de bootstrap
 $primary-color = #679ed5
 $primary-color-hover = #63a6e9
@@ -82,6 +85,9 @@ a:hover, a:focus, a:active
   //en poncho le ponen !important así que hay que hacer lo mismo para pisarlo
   color: $primary-color !important
   
+.text-main
+  color: $main-color !important
+  
 .bg-primary
   //en poncho le ponen !important así que hay que hacer lo mismo para pisarlo
   background-color: $primary-color !important
@@ -108,9 +114,22 @@ a:hover, a:focus, a:active
   padding-left: 30px;
   padding-right: 30px;
   font-size: 0.9rem;
+  &.btn-lg
+    padding-top: 17px;
+    padding-bottom: 17px;
+    padding-left: 40px;
+    padding-right: 40px;
+    font-size: 1.2rem;
+  &.btn-md
+    padding-top: 13px;
+    padding-bottom: 13px;
+    padding-left: 35px;
+    padding-right: 35px;
+    font-size: 1rem;
 
 .btn-main
   background-color: $main-color !important
+  color: #FFF !important;
 
 
 // botones principales
