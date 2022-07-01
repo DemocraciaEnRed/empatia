@@ -19,7 +19,13 @@
     flex-wrap wrap
     align-items stretch
     justify-content space-between
-
+  .promo
+    position: absolute
+    bottom: 5
+    right: 5;
+    font-size: 0.9rem;
+    color: #a0a0a0
+    margin: 0;
   .institutional
     display: flex
     flex-direction row
@@ -30,7 +36,7 @@
       flex-grow: 1
       display: flex;
       align-items: center;
-      justify-content: center;
+      justify-content: flex-end;
     .logo.gob
       display: flex;
       align-items: center;
@@ -74,12 +80,12 @@
       flex-direction column
       flex-wrap wrap
       padding 0 10px
-      align-items: flex-start
+      align-items: center
       .social-media
         flex-direction row
         flex-wrap wrap
         padding-bottom: 20px;
-        align-items: flex-start
+        align-items: center
       .logo.gob
         flex-direction row
         align-items: flex-start
