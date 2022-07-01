@@ -10,24 +10,24 @@ import Stats from './stats/component'
 
 export default class HelpLayout extends PureComponent {
   articles = [
-    {
-      title: '¿Cómo funciona?',
-      Content: () => <Content content={articles.como} />,
-      slug: 'como-funciona',
-      path: '/ayuda/como-funciona'
-    },
-    {
-      title: 'Acerca de este sitio',
-      Content: () => <Content content={articles.acerca} />,
-      slug: 'acerca',
-      path: '/ayuda/acerca'
-    },
-        {
-      title: 'Estadísticas',
-      Content: Stats,
-      slug: 'estadisticas',
-      path: '/ayuda/estadisticas'
-    },
+    // {
+    //   title: '¿Cómo funciona?',
+    //   Content: () => <Content content={articles.como} />,
+    //   slug: 'como-funciona',
+    //   path: '/ayuda/como-funciona'
+    // },
+    // {
+    //   title: 'Acerca de este sitio',
+    //   Content: () => <Content content={articles.acerca} />,
+    //   slug: 'acerca',
+    //   path: '/ayuda/acerca'
+    // },
+    //     {
+    //   title: 'Estadísticas',
+    //   Content: Stats,
+    //   slug: 'estadisticas',
+    //   path: '/ayuda/estadisticas'
+    // },
     {
       title: t('help.tos.title'),
       Content: () => <Content content={articles.tos} />,
@@ -40,12 +40,12 @@ export default class HelpLayout extends PureComponent {
       slug: 'privacidad',
       path: '/ayuda/privacidad'
     },
-    {
-      title: t('help.markdown.title'),
-      Content: MarkdownGuide,
-      slug: 'markdown',
-      path: '/ayuda/markdown'
-    }
+    // {
+    //   title: t('help.markdown.title'),
+    //   Content: MarkdownGuide,
+    //   slug: 'markdown',
+    //   path: '/ayuda/markdown'
+    // }
   ]
 
   componentDidMount() {
@@ -58,8 +58,8 @@ export default class HelpLayout extends PureComponent {
 
     return (
       <div>
-        <div className='help-container container'>
-          <ol className='breadcrumb'>
+        <div className='help-container container py-5'>
+          {/* <ol className='breadcrumb'>
             <li className='breadcrumb-item'>
               <Link to='/'>Consultas</Link>
             </li>
@@ -69,15 +69,15 @@ export default class HelpLayout extends PureComponent {
             <li className='breadcrumb-item active'>
               <span>{active.title}</span>
             </li>
-          </ol>
+          </ol> */}
           <section>
             <div className='row'>
-              <aside className='col-md-4'>
+              {/* <aside className='col-md-4'>
                 <Sidebar
                   activeSlug={active.slug}
                   articles={this.articles} />
-              </aside>
-              <article className='help-content col-md-8'>
+              </aside> */}
+              <article className='help-content col-md-12'>
                 <active.Content />
               </article>
             </div>
