@@ -16,6 +16,15 @@
         label='DNI'
         input.form-control(type='text', id='dni', name='dni', maxlength=20, placeholder='Tu DNI', value='#{user.dni||""}', disabled=true)
       .form-group
+        label='Provincia'
+        input.form-control(type='text', id='provincia', name='provincia', maxlength=20, placeholder='Tu provincia', value='#{user.provincia||""}', disabled=true)
+      .form-group
+        label='Localidad'
+        input.form-control(type='text', id='localidad', name='localidad', maxlength=20, placeholder='Tu localidad', value='#{user.localidad||""}', disabled=true)
+      .form-group
+        label='Numero de telefono'
+        input.form-control(type='text', id='contacto', name='contacto', maxlength=20, placeholder='Tu contacto', value='#{user.contacto||""}', disabled=true)
+      .form-group
         label= t('signup.email')
         input.form-control(type='text', disabled='disabled', name='email', maxlength=200, placeholder=t('forgot.mail.example'), value='#{user.email}', validate='required email')
       //- .form-group

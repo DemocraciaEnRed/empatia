@@ -13,6 +13,9 @@ const adminData = {
   firstName: 'Admin',
   lastName: 'Sistema',
   dni: '00000000',
+  provincia: 'Ciudad de Buenos Aires',
+  localidad: 'Ciudad de Buenos Aires',
+  contacto: '+11 1234567890',
   password: adminPass,
   re_password: adminPass,
   locale: 'es'
