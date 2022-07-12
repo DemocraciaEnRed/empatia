@@ -199,6 +199,7 @@ exports.expose.confidential.keys = [
   'email',
   'avatar',
   'staff',
+  'manager',
   'notifications',
   'locale',
   'privileges',
