@@ -17,12 +17,12 @@ module.exports = ({
 }) => emailTemplate({
   body: html`
     <p>Hola <strong>${userName}</strong>,</p>
-    <p>¡Facundo y todo su equipo te agradecen por compartirnos tú idea!</p>
-    <p>Tu participación y apoyo, son muy importantes para EMPATÍA. Mientras te escuchamos, te invitamos a conocer nuestros proyectos y dejarnos tus comentarios y opinión sobre ellas.</p>
+    <p>¡Facundo y su equipo te agradecemos por compartirnos tu idea!</p>
+    <p>Tu apoyo y participación son muy importantes para nosotros. Por eso te invitamos a conocer, comentar, opinar y difundir nuestros proyectos.</p>
     ${buttonTemplate({
       url: baseUrl,
       text: 'Conocé los proyectos'
     })}
-    <p>Gracias por ser parte de EMPATÍA, la revolución que transforma la Argentina</p>
+    <p>Gracias por ser parte de EMPATÍA, la revolución que transforma la Argentina.</p>
   `
 })

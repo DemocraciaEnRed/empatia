@@ -17,13 +17,12 @@ module.exports = ({
 }) => emailTemplate({
   body: html`
     <p>Hola <strong>${userName}</strong>,</p>
-    <p>Recibimos una solicitud para reestablecer tu contraseña. Hacé click en el siguiente botón para terminar el proceso:</p>
+    <p>Recibimos una solicitud para restablecer tu contraseña. Hacé click en el siguiente botón para terminar el proceso:</p>
     ${buttonTemplate({
       url: resetPasswordUrl,
       text: 'Reestablecer contraseña'
     })}
-    <p>Saludos,<br /><strong>${config.organizationName}</strong></p>
-    <p style='font-size:12px'><i>PD: Si no solicitaste reestablecer tu contraseña podés ignorar este correo.</i></p>
-    <p style='font-size:12px'><i>Si el botón de "Reestableecr contraseña" no funciona, copiá y pegá el siguiente link en tu navegador: <a href="${resetPasswordUrl}" target="_blank">${resetPasswordUrl}</a></i></p>
+    <p style='font-size:12px'><i>PD: Si no solicitaste restablecer tu contraseña podés ignorar este correo.</i></p>
+    <p style='font-size:12px'><i>Si el botón de “Restablecer contraseña” no funciona, copiá y pegá el siguiente link en tu navegador: <a href="${resetPasswordUrl}" target="_blank">${resetPasswordUrl}</a></i></p>
   `
 })

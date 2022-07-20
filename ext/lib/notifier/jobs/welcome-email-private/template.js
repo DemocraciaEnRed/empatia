@@ -25,7 +25,7 @@ module.exports = ({
       text: 'Entrar a la plataforma'
     })}
     <p style='font-size:16px'><strong>¡Te pedimos que la primera acción que hagas sea cambiar la contraseña entrando a tu perfil!</strong></p>
-    <p>Muchas gracias, ¡Te esperamos!</p>
+    <p>Gracias por ser parte de Empatía, la revolución que transforma la Argentina.</p>
     <p style='font-size:12px'><i>Si el botón de "Entrar a la plataforma" no funciona, copiá y pegá el siguiente link en tu navegador: <a href="${baseUrl}" target="_blank">${baseUrl}</a></i></p>
   `
 })
