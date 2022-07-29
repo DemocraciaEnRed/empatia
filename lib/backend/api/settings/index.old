@@ -46,26 +46,21 @@ app.post('/settings/password', restrict, function (req, res) {
   auth(req.user.get('email'), current, function (err, user, info) {
     if (err) return res.status(200).json({ error: t('settings.password-invalid') })
     log('Updating user %s password', user.id)
-    try {
-      user.authenticate(current, function (err, authenticated) {
+    user.authenticate(current, function (err, authenticated) {
+      if (err) return res.status(500).json({ error: err.message })
+      // I have to send a 200 here because FormView can't show the actual error if other response code is sent.
+      // This have to be modified with #531 referring to error handling in the backend.
+      if (!authenticated) return res.status(200).json({ error: t('settings.password-invalid') })
+      
+      user.setPassword(password, function (err) {
         if (err) return res.status(500).json({ error: err.message })
-        // I have to send a 200 here because FormView can't show the actual error if other response code is sent.
-        // This have to be modified with #531 referring to error handling in the backend.
-        if (!authenticated) return res.status(200).json({ error: t('settings.password-invalid') })
         
-        user.setPassword(password, function (err) {
+        user.save(function (err) {
           if (err) return res.status(500).json({ error: err.message })
-          
-          user.save(function (err) {
-            if (err) return res.status(500).json({ error: err.message })
-            res.send(200)
-          })
+          res.send(200)
         })
       })
-    } catch (e) {
-      log('Error setting password: %s', e.message)
-      res.status(500).json({ error: e.message })
-    }
+    })
   })
 })
 
