@@ -435,7 +435,7 @@
   "signup.firstname": "Nombre",
   "signup.go-to": "Ir a los proyectos para",
   "signup.lastname": "Apellido",
-  "signup.now": "¡Registrarme ahora!",
+  "signup.now": "¡Registrarme!",
   "signup.now-can-vote": "¡Ya podés participar en {organizationName}!",
   "signup.received": "Te enviamos un correo electrónico para que puedas validar tu registro.",
   "signup.resend-email": "Reenviar",
