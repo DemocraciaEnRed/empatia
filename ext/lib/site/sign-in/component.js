@@ -122,7 +122,7 @@ export class SignIn extends Component {
             maxLength='200'
             required />
         </div>
-        { config.allowPublicSignUp && registerLink }
+        {/* { config.allowPublicSignUp && registerLink } */}
         <div className='form-group' />
         {!this.state.loading && (
           <button
@@ -154,11 +154,16 @@ export class SignIn extends Component {
             </div>
         </div>
         {form}
-        <hr/>
+        {/* <hr/>
         <p className='muted text-center'>¿Aún no se registró?</p>
         <a href={config.typeformLink} className="btn btn-success btn-block text-white">
           REGISTRARSE
-        </a>
+        </a> */}
+        <hr/>
+        <p className='muted text-center'>¿Aún no se registró?</p>
+        <Link to="/signup" className="btn btn-success btn-block text-white">
+          REGISTRARSE
+        </Link>
       </div>
     )
   }
